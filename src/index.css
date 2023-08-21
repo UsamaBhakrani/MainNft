@@ -1,0 +1,17 @@
+:root{
+  --bg-color: #021022;
+  --text-color: #FFF;
+  --linear-color: linear-gradient(135deg, #8A64FF 0%, #1E77AD 50.52%, #E016FF 91.67%);
+  --input-color: #F8F8F8;
+  --font-gilroy: Gilroy;
+  --font-made: MADE Voyager PERSONAL USE;
+  --font-xs: 12px;
+  --font-small: 14px;
+  --font-smid: 18px;
+  --font-lg: 68px;
+  --font-mid: 48px;
+  --w-300: 300;
+  --w-400: 400;
+  --w-500: 500;
+  --w-600: 600;
+}

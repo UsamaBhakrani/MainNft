@@ -1,0 +1,18 @@
+.modal-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #14141f9c;
+    z-index: 444444;
+}
+.mod{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red !important;
+    border-radius: 5px;
+    z-index: 555555;
+}
