@@ -1,22 +1,34 @@
-
-import { useParams,Link } from 'react-router-dom'
-import  { NFTData }  from '../../assets/Data/Data';
+import { useParams, Link } from "react-router-dom";
+import { NFTData } from "../../assets/Data/Data";
 
 function NftDetails() {
-  const {id} = useParams();
-  const singleNft = NFTData.find(item => item.id === id);
+  const { id } = useParams();
+  const singleNft = NFTData.map((item) => {
+    return (
+      <Link key={item.id} to={id}>
+        <div style={{ color: "white" }}>
+          {item.Username}
+          <img
+            style={{ width: "50px", height: "50px" }}
+            src={item.NFTImg}
+            alt=""
+          />
+        </div>
+        ;
+      </Link>
+    );
+  });
 
-  console.log(id)
+  console.log(NFTData);
 
-  return(
+  return (
     <>
-    <Link to='/'>
-      <h1 style={{color: 'white'}}>{singleNft.NFtName}</h1> 
-      <img src={singleNft.NFTImg} alt="" />
-      <h1>{id}</h1>
-    </Link>
+      {singleNft}
+      <Link to={id}>
+        <h2 style={{ color: "white" }}>Hello World</h2>
+      </Link>
     </>
-  )
+  );
 }
 
-export default NftDetails
+export default NftDetails;

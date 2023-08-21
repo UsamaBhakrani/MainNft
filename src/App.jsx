@@ -1,13 +1,10 @@
-import {
-  Routes,
-  Route
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BubblyContainer} from "react-bubbly-transitions";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BubblyContainer } from "react-bubbly-transitions";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
@@ -22,35 +19,39 @@ import EmailVerification from "./pages/EmailVerification/EmailVerification";
 import NewPassword from "./pages/NewPassword/NewPassword";
 import NftProfile from "./pages/Dashboard/NftProfile";
 
-
 function App() {
   useEffect(() => {
     Aos.init({
       duration: 2000,
       offset: 80,
       once: true,
-      easing: 'ease'
+      easing: "ease",
     });
   }, []);
 
   return (
     <>
-     <BubblyContainer/>
+      <BubblyContainer />
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/Register" element={<Register />}/>
-        <Route path="/Login" element={<Login />}/>
-        <Route path="/EmailVerification" element={<EmailVerification />}/>
-        <Route path="/ForgotPassword" element={<ForgotPassword />}/>
-        <Route path="/NewPassword" element={<NewPassword />}/>
-        <Route path="/PasswordReset" element={<PasswordReset />}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
+        <Route path="/EmailVerification" element={<EmailVerification />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword />} />
+        <Route path="/NewPassword" element={<NewPassword />} />
+        <Route path="/PasswordReset" element={<PasswordReset />} />
         <Route path="/Dashboard" element={<Dashboard />}>
-           <Route  index element={<DashboardHome />}/>
-           <Route  path="NftProfile" element={<NftProfile />}/>
-           <Route  path="Settings" element={<Settings />}/>
+          <Route index element={<DashboardHome />} />
+          <Route path="NftProfile" element={<NftProfile />} />
+          <Route path="Settings" element={<Settings />} />
         </Route>
-        <Route path="/MarketPlace" element={<MarketPlace />}/>
-        <Route path="MarketPlace/:id" element={<NftDetails />}/>
+        <Route path="Dashboard/MarketPlace" element={<MarketPlace />} />
+        <Route path="MarketPlace" element={<MarketPlace />} />
+        <Route path="/*" element={<NftDetails />} />
+        <Route
+          path="*"
+          element={<div style={{ color: "White" }}>Error Page</div>}
+        />
       </Routes>
     </>
   );

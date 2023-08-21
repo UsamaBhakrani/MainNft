@@ -18,7 +18,7 @@ function Nft__Card(props) {
       <div className="nft__card" >
         <div className="card-hold">
           <div className="tops">
-            <Link to={`MarketPlace/${id}`}><img className="bg" src={NFTImg} alt="nftImage" /></Link>
+            <Link to={`${id}`}><img className="bg" src={NFTImg} alt="nftImage" /></Link>
             <div className="glass">
               <p>{Time}</p>
             </div>

@@ -53,7 +53,7 @@ function NftProfile() {
             <div className="nftcard" key={Data.id} >
             <div className="card-hold">
               <div className="tops">
-                <Link to={`/MarketPlace${Data.id}`}><img className="bg" src={Data.NFTImg} alt="nftImage" /></Link>
+                <Link to={`${Data.id}`}><img className="bg" src={Data.NFTImg} alt="nftImage" /></Link>
                 <div className="glass">
                   <p>For Sale</p>
                 </div>
